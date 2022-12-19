@@ -1,0 +1,263 @@
+/* 
+  ==========
+  Table Of Contents 
+
+  1. Global styles
+  2. Typography
+  3. Layouts
+  4. Components
+    4.1 Buttons
+  ==========
+*/
+
+/* 
+  ==========
+  1. Global styles
+  ==========
+*/
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --font-family: 'Inter', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--off-white);
+  color: var(--very-dark-blue);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 
+  ==========
+  2. Typography
+  ==========
+*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  max-width: 15rem;
+}
+
+p, a {
+  text-decoration: none;
+  font-size: 0.9375rem;
+  color: var(--dark-grayish-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+/* 
+  ==========
+  3. Layouts
+  ==========
+*/
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70em);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  nav {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+  }
+
+  a:hover {
+    transition: all 0.3s;
+    color: var(--soft-red);
+  }
+
+  #menu {
+    display: none;
+  }
+}
+
+.main-section {
+  display: grid;
+  gap: 2em;
+  margin-bottom: 3em;
+}
+
+.web-3-section {
+  display: grid;
+  gap: 1em;
+}
+
+.web-3 {
+  display: grid;
+  gap: 1em;
+}
+
+.sidebar {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: 1em;
+}
+
+.sidebar h1 {
+  color: var(--soft-orange);
+  margin-bottom: 0.9em;
+}
+
+.sidebar p {
+  color: var(--grayish-blue);
+  margin-top: 0.5em;
+}
+
+.bar {
+  width: 100%;
+  height: 0.009em;
+  background-color: var(--dark-grayish-blue);
+  margin: 1.5em 0;
+}
+
+@media (min-width: 40em) {
+  .web-3-section {
+    gap: 2em;
+  }
+
+  .web-3-section img {
+    content: url('/imgs/image-web-3-desktop.jpg');
+  }
+
+  .web-3-section h1 {
+    font-size: 3rem;
+    max-width: 100%;
+  }
+
+  .web-3
+  {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+@media (min-width: 52em) {
+  .main-section {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 6em;
+  }
+
+  .sidebar {
+    grid-column-start: 4;
+    grid-column-end: 3;
+  }
+
+  .web-3-section {
+    grid-column: span 2;
+  }
+}
+
+.info-section {
+  display: grid;
+  gap: 1.5em;
+  margin-bottom: 6em;;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.info-block img {
+  width: 40%;
+}
+
+.info-block h1 {
+  color: var(--grayish-blue);
+  font-weight: 700;
+}
+
+@media only screen 
+and (min-width: 40em) 
+and (max-width: 64em) {
+  .info-block img {
+    width: 20%;
+  }
+}
+
+@media (min-width: 52em) {
+  .info-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+  ==========
+  4. components
+  ==========
+*/
+
+/* 
+  ==========
+  4.1. Button
+  ==========
+*/
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  padding: 0.9em 1.7em;
+  letter-spacing: 0.3em;
+  margin-top: 1em;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: var(--very-dark-blue);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
