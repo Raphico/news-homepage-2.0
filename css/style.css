@@ -118,7 +118,7 @@ header {
 .mobile-menu-toggle {
   display: none;
   position: absolute;
-  background-image: url(./imgs/icon-menu.svg);
+  background-image: url(../imgs/icon-menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -130,7 +130,7 @@ header {
 }
 
 .mobile-menu-toggle[aria-expanded='true'] {
-  background-image: url(./imgs/icon-menu-close.svg);
+  background-image: url(../imgs/icon-menu-close.svg);
 }
 
 @media (max-width: 40em) {
@@ -205,7 +205,7 @@ header {
   }
 
   .web-3-section img {
-    content: url(./imgs/image-web-3-desktop.jpg);
+    content: url(../imgs/image-web-3-desktop.jpg);
   }
 
   .web-3-section h1 {
